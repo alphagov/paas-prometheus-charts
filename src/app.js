@@ -111,6 +111,23 @@ _.forOwn(samples, (sampleConfig, type) => {
 				width: req.query.width || 800,
 				height: req.query.height || 800,
 				data: null,
+				colors: req.query.colors || [
+					'#005ea5',
+					'#28a197',
+					'#2b8cc4',
+					'#6f72af',
+					'#2e358b',
+					'#912b88',
+					'#d53880',
+					'#f499be',
+					'#ffbf47',
+					'#f47738',
+					'#b58840',
+					'#df3034',
+					'#b10e1e',
+					'#85994b',
+					'#006435',
+				]
 			},
 		};
 		if (type === 'pie') {

@@ -21,7 +21,8 @@ http://localhost:3030/{CHART_TYPE}.svg?query={PROMETHESUS_QUERY}
 For example:
 
 * [Pie chart of buildpack usage](http://localhost:3030/pie.svg?query=sum(cf_application_info)%20by%20(buildpack))
-* [Bar chart of memory usage by org](http://localhost:3030/pie.svg?query=sum(cf_application_memory_mb)%20by%20(organization_name))
+* [Bar chart of memory usage by org](http://localhost:3030/bar.svg?query=sum(cf_application_memory_mb)%20by%20(organization_name))
+* [Pie chart of memory usage by org with different colors](http://localhost:3030/pie.svg?query=sum(cf_application_memory_mb)%20by%20(organization_name)&colors=d320)
 
 ## Deploying to CF
 
