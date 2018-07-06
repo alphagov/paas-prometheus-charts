@@ -138,5 +138,5 @@ _.forOwn(samples, (sampleConfig, type) => {
 
 const port = process.env.PORT || 3030
 app.listen(port, () => {
-	console.log(`nivo api listening on ${port}`)
+	console.log(`listening on ${port}`)
 })

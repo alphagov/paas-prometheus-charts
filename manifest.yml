@@ -1,0 +1,10 @@
+---
+applications:
+- name: prometheus-charts
+  command: node src/app.js
+  memory: 1G
+  buildpack: nodejs_buildpack
+  env:
+    PROM_URL: https://path-to-prom
+    PROM_USERNAME: prom-user
+    PROM_PASSWORD: prom-pass

@@ -1,7 +1,7 @@
 {
-  "name": "nivo-api",
+  "name": "paas-prometheus-charts",
   "version": "0.1.0",
-  "description": "Rendering API for nivo dataviz React/d3 components",
+  "description": "Renders SVG charts for prometheus queries",
   "main": "src/app.js",
   "licenses": [
     {
@@ -10,12 +10,12 @@
     }
   ],
   "author": {
-    "name": "Raphaël Benitte",
+    "name": "GOV.UK PaaS and Raphaël Benitte",
     "url": "https://github.com/plouc"
   },
-  "engineStrict": true,
   "engines": {
-    "node": ">=6.0.0"
+    "node": "8.x.x",
+    "npm": ">=5.x.x"
   },
   "devDependencies": {
     "husky": "^0.14.3",

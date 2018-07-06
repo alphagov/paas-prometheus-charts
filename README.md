@@ -20,5 +20,28 @@ http://localhost:3030/{CHART_TYPE}.svg?query={PROMETHESUS_QUERY}
 
 For example:
 
-[Pie chart of buildpack usage](http://localhost:3030/pie.svg?query=sum(cf_application_info)%20by%20(buildpack))
-[Bar chart of memory usage by org](http://localhost:3030/pie.svg?query=sum(cf_application_memory_mb)%20by%20(organization_name))
+* [Pie chart of buildpack usage](http://localhost:3030/pie.svg?query=sum(cf_application_info)%20by%20(buildpack))
+* [Bar chart of memory usage by org](http://localhost:3030/pie.svg?query=sum(cf_application_memory_mb)%20by%20(organization_name))
+
+## Deploying to CF
+
+Edit the `manifest.yml` to wire it up to prometheus:
+
+```
+---
+applications:
+- name: prometheus-charts
+  command: node src/app.js
+  memory: 256M
+  buildpack: nodejs_buildpack
+  env:
+    PROM_URL: https://path-to-prom
+    PROM_USERNAME: prom-user
+    PROM_PASSWORD: prom-pass
+```
+
+then push
+
+```
+cf push
+```
